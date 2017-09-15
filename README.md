@@ -21,3 +21,6 @@ C:\Users\Alejandro Figueroa\.nuget\packages\refit\4.0.1\build\netstandard1.4\ref
 iteral for the 'path' argument. [C:\Users\Alejandro Figueroa\Documents\Projects\TodoClient\TodoClient.csproj]
 ```
 
+By defult (design?) Refit uses async methods, so the service interface must return Tasks.
+
+In order to easily consume the api client in the Program class (with `await`), `async main` is used. This requires the property `<LangVersion>7.1</LangVersion>` in the .csproj file. 
