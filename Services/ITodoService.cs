@@ -9,9 +9,6 @@ namespace TodoClient.Services
     public interface ITodoService
     {
         [Get("/todo/")]
-        Task<IList<Models.TodoItem>> Get();
-
-        [Get("/todo/all")]
         Task<IList<Models.TodoItem>> GetAll();
 
         [Get("/todo/{id}")]
